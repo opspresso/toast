@@ -10,7 +10,7 @@
 
 ## Overview
 
-Toast Dist is the official distribution repository for [Toast App](https://github.com/opspresso/toast-app). This repository is used to manage and distribute release versions of the built Toast App.
+Toast Dist is the official distribution repository for Toast App. This repository is used to manage and distribute release versions of the built Toast App.
 
 Toast App is a productivity tool that allows users to define custom shortcuts and actions. When triggered with a global hotkey, Toast displays a popup with user-defined buttons. Each button can be assigned a specific action or command to execute.
 
@@ -106,7 +106,7 @@ Solutions for common issues:
    - Ensure you are logged into your Toast Web account
    - Check your internet connection
 
-For more troubleshooting solutions, refer to the [Toast App documentation](https://github.com/opspresso/toast-app/docs).
+For more troubleshooting solutions, refer to the documentation included with the application or visit [app.toast.sh](https://app.toast.sh) for support.
 
 ## Toast Web Integration
 
@@ -126,15 +126,12 @@ Users can create an account and manage their subscription at [https://app.toast.
 - **Storage**: Minimum 100MB
 - **Memory**: Minimum 2GB RAM
 
-## Source Code
-
-The source code for Toast App is available in the [Toast App repository](https://github.com/opspresso/toast-app).
 
 ## License
 
-MIT License - See the [LICENSE](https://github.com/opspresso/toast-app/LICENSE) file for details.
+MIT License - See the [LICENSE](LICENSE) file for details.
 
 ## Contact and Support
 
-- Bug reports and feature requests: [Issue Tracker](https://github.com/opspresso/toast-app/issues)
+- Bug reports and feature requests: [Contact Support](https://app.toast.sh/contact)
 - General inquiries: [Official Website](https://app.toast.sh/contact)
