@@ -107,11 +107,19 @@ main() {
   # jq를 사용하여 JSON 업데이트
   local tmp_file="${target_file}.tmp"
 
+  # 다운로드 URL 생성
+  local mac_url="https://github.com/${USERNAME}/${REPONAME}/releases/download/v${version}/Toast-${version}-arm64.dmg"
+  local linux_url="https://github.com/${USERNAME}/${REPONAME}/releases/download/v${version}/Toast-${version}.AppImage"
+  local win_url="https://github.com/${USERNAME}/${REPONAME}/releases/download/v${version}/Toast.Setup.${version}.exe"
+
   # jq 명령으로 versions.json 파일 업데이트
   jq --arg project "${TG_PROJECT}" \
      --arg version "${version}" \
      --arg date "${current_date}" \
-     '.[$project].version = $version | .[$project].releaseDate = $date' \
+     --arg mac_url "${mac_url}" \
+     --arg linux_url "${linux_url}" \
+     --arg win_url "${win_url}" \
+     '.[$project].version = $version | .[$project].releaseDate = $date | .[$project].downloadUrl.mac = $mac_url | .[$project].downloadUrl.linux = $linux_url | .[$project].downloadUrl.win = $win_url' \
      "${target_file}" > "${tmp_file}"
 
   # 업데이트된 파일 확인
@@ -127,6 +135,8 @@ main() {
 
   # 임시 파일 삭제
   rm -f "${tmp_file}"
+
+  DRY_RUN=1
 
   # DRY_RUN 모드가 아닐 경우 Git 커밋/푸시 작업 수행
   if [ "${DRY_RUN}" != "1" ]; then
