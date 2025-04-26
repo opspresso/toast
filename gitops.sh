@@ -136,8 +136,6 @@ main() {
   # 임시 파일 삭제
   rm -f "${tmp_file}"
 
-  DRY_RUN=1
-
   # DRY_RUN 모드가 아닐 경우 Git 커밋/푸시 작업 수행
   if [ "${DRY_RUN}" != "1" ]; then
     # 변경사항 커밋
