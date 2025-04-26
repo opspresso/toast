@@ -102,7 +102,7 @@ main() {
   local current_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
   # 버전 및 릴리스 날짜 업데이트
-  command_log "jq를 사용하여 버전 업데이트: ${version}, 릴리스 날짜: ${current_date}"
+  command_log "jq를 사용하여 버전 업데이트: v${version}, 릴리스 날짜: ${current_date}"
 
   # jq를 사용하여 JSON 업데이트
   local tmp_file="${target_file}.tmp"
