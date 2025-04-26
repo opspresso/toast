@@ -59,15 +59,6 @@ command_log() {
   echo_message 3 "$ $@"
 }
 
-# sed 명령어 플랫폼 호환성 처리
-replace_in_file() {
-  if [ "${OS_NAME}" == "darwin" ]; then
-    sed -i "" -e "$1" "$2"
-  else
-    sed -i -e "$1" "$2"
-  fi
-}
-
 # 메인 실행 함수
 main() {
   # 환경 변수 확인
@@ -77,6 +68,11 @@ main() {
   # 필수 환경변수 확인
   if [ -z "${TG_PROJECT}" ] || [ -z "${TG_VERSION}" ]; then
     error "필수 환경변수가 설정되지 않았습니다. (TG_PROJECT, TG_VERSION)"
+  fi
+
+  # jq 명령어 확인
+  if ! command -v jq > /dev/null; then
+    error "jq가 설치되어 있지 않습니다. apt-get install -y jq 명령으로 설치하세요."
   fi
 
   # 타겟 파일 존재 확인
@@ -106,18 +102,31 @@ main() {
   local current_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
   # 버전 및 릴리스 날짜 업데이트
-  command_log "버전 업데이트: ${version}, 릴리스 날짜: ${current_date}"
+  command_log "jq를 사용하여 버전 업데이트: ${version}, 릴리스 날짜: ${current_date}"
 
-  # JSON 파일에서 특정 프로젝트의 버전과 릴리스 날짜 업데이트
-  if [ "${OS_NAME}" == "darwin" ]; then
-    # MacOS용 sed 명령어
-    sed -i "" -e "s/\(\"${TG_PROJECT}\":\s*{\s*\"version\":\s*\"\)[^\"]*\"/\1${version}\"/" "${target_file}"
-    sed -i "" -e "s/\(\"${TG_PROJECT}\":\s*{\s*\"version\":\s*\"[^\"]*\",\s*\"releaseDate\":\s*\"\)[^\"]*\"/\1${current_date}\"/" "${target_file}"
+  # jq를 사용하여 JSON 업데이트
+  local tmp_file="${target_file}.tmp"
+
+  # jq 명령으로 versions.json 파일 업데이트
+  jq --arg project "${TG_PROJECT}" \
+     --arg version "${version}" \
+     --arg date "${current_date}" \
+     '.[$project].version = $version | .[$project].releaseDate = $date' \
+     "${target_file}" > "${tmp_file}"
+
+  # 업데이트된 파일 확인
+  if [ -s "${tmp_file}" ]; then
+    # 파일 크기가 0보다 크면 원본 파일 대체
+    cat "${tmp_file}" > "${target_file}"
+    command_log "JSON 파일 업데이트 완료"
   else
-    # Linux용 sed 명령어
-    sed -i -e "s/\(\"${TG_PROJECT}\":\s*{\s*\"version\":\s*\"\)[^\"]*\"/\1${version}\"/" "${target_file}"
-    sed -i -e "s/\(\"${TG_PROJECT}\":\s*{\s*\"version\":\s*\"[^\"]*\",\s*\"releaseDate\":\s*\"\)[^\"]*\"/\1${current_date}\"/" "${target_file}"
+    # 파일 크기가 0이면 에러
+    rm -f "${tmp_file}"
+    error "jq 명령 실행 중 오류가 발생했습니다."
   fi
+
+  # 임시 파일 삭제
+  rm -f "${tmp_file}"
 
   # DRY_RUN 모드가 아닐 경우 Git 커밋/푸시 작업 수행
   if [ "${DRY_RUN}" != "1" ]; then
