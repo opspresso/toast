@@ -1,5 +1,6 @@
 {
   "toast": {
+    "name": "Toast",
     "description": "",
     "downloadUrl": {
       "mac": "https://github.com/opspresso/toast-dist/releases/download/v0.5.6/Toast-0.5.6-arm64.dmg",
