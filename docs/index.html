@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5; url=https://app.toast.sh">
+  <title>Toast App - 잠시 후 리다이렉트됩니다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0063B1;
+      --primary-dark: #004e8c;
+      --secondary: #FF6B6B;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--dark);
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 99, 177, 0.2);
+    }
+
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 99, 177, 0.3);
+    }
+
+    .timer {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin: 1.5rem 0;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      flex: 1 1 200px;
+      max-width: 200px;
+      padding: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .footer {
+      margin-top: 2rem;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 99, 177, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(0, 99, 177, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 99, 177, 0);
+      }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature {
+        max-width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="images/logo192.png" alt="Toast App Logo" class="logo">
+    <h1>Toast App</h1>
+    <p>간단하고 강력한 생산성 도구, Toast App은 여러분의 업무 효율성을 높여줍니다.</p>
+
+    <div class="timer"><span id="countdown">5</span>초 후 자동으로 리다이렉트됩니다</div>
+
+    <a href="https://app.toast.sh" class="btn pulse">지금 바로 시작하기 <i class="fas fa-arrow-right"></i></a>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <div class="feature-title">빠른 실행</div>
+        <div class="feature-desc">원하는 작업을 순식간에 실행할 수 있습니다.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+        <div class="feature-title">클라우드 동기화</div>
+        <div class="feature-desc">모든 기기에서 설정을 동기화하세요.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-cog"></i></div>
+        <div class="feature-title">고급 사용자화</div>
+        <div class="feature-desc">자신만의 워크플로우를 만들 수 있습니다.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2025 Toast App. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    // 카운트다운 타이머
+    let timeLeft = 5;
+    const countdownElement = document.getElementById('countdown');
+
+    const countdownTimer = setInterval(function() {
+      if (timeLeft <= 0) {
+        clearInterval(countdownTimer);
+        window.location.href = "https://app.toast.sh";
+      } else {
+        countdownElement.textContent = timeLeft;
+      }
+      timeLeft -= 1;
+    }, 1000);
+
+    // 페이지가 로드되면 자동으로 리다이렉션
+    setTimeout(function() {
+      window.location.href = "https://app.toast.sh";
+    }, 5000);
+  </script>
+</body>
+
+</html>
