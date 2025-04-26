@@ -114,7 +114,7 @@ main() {
 
   # jq 명령으로 versions.json 파일 업데이트
   jq --arg project "${TG_PROJECT}" \
-     --arg version "${version}" \
+     --arg version "v${version}" \
      --arg date "${current_date}" \
      --arg mac_url "${mac_url}" \
      --arg linux_url "${linux_url}" \
