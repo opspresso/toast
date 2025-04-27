@@ -143,7 +143,7 @@ main() {
     git add "${target_file}"
 
     command_log "git commit"
-    git commit -m "${TG_PROJECT} ${TG_VERSION} 버전 업데이트"
+    git commit -m "${TG_PROJECT} Release ${TG_VERSION}"
 
     # 변경사항 푸시
     command_log "git push"
