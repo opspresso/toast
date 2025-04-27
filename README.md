@@ -126,12 +126,10 @@ Users can create an account and manage their subscription at [https://app.toast.
 - **Storage**: Minimum 100MB
 - **Memory**: Minimum 2GB RAM
 
-
 ## License
 
 MIT License - See the [LICENSE](LICENSE) file for details.
 
 ## Contact and Support
 
-- Bug reports and feature requests: [Contact Support](https://app.toast.sh/contact)
-- General inquiries: [Official Website](https://app.toast.sh/contact)
+- [Official Website](https://app.toast.sh/)
