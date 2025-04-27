@@ -3,11 +3,11 @@
     "name": "Toast",
     "description": "",
     "downloadUrl": {
-      "mac": "https://github.com/opspresso/toast-dist/releases/download/v0.5.31/Toast-0.5.31-arm64.dmg",
-      "linux": "https://github.com/opspresso/toast-dist/releases/download/v0.5.31/Toast-0.5.31.AppImage",
-      "win": "https://github.com/opspresso/toast-dist/releases/download/v0.5.31/Toast.Setup.0.5.31.exe"
+      "mac": "https://github.com/opspresso/toast-dist/releases/download/v0.5.34/Toast-0.5.34-arm64.dmg",
+      "linux": "https://github.com/opspresso/toast-dist/releases/download/v0.5.34/Toast-0.5.34.AppImage",
+      "win": "https://github.com/opspresso/toast-dist/releases/download/v0.5.34/Toast.Setup.0.5.34.exe"
     },
-    "releaseDate": "2025-04-27T08:43:35Z",
-    "version": "v0.5.31"
+    "releaseDate": "2025-04-27T09:23:56Z",
+    "version": "v0.5.34"
   }
 }
