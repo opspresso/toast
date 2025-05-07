@@ -1,4 +1,4 @@
-# Toast Dist
+# Toast
 
 <p align="center">
   <img src="images/logo512.png" alt="Toast App Logo" width="128" height="128">
@@ -10,7 +10,7 @@
 
 ## Overview
 
-Toast Dist is the official distribution repository for Toast App. This repository is used to manage and distribute release versions of the built Toast App.
+Toast is the official distribution repository for Toast App. This repository is used to manage and distribute release versions of the built Toast App.
 
 Toast App is a productivity tool that allows users to define custom shortcuts and actions. When triggered with a global hotkey, Toast displays a popup with user-defined buttons. Each button can be assigned a specific action or command to execute.
 
