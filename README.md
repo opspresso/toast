@@ -24,7 +24,7 @@ You can download the latest Toast App through the following methods:
 
 ### Direct Download
 
-Download the latest version from the [Releases page](https://github.com/opspresso/toast-dist/releases):
+Download the latest version from the [Releases page](https://github.com/opspresso/toast/releases):
 
 - macOS: `Toast-App-mac.dmg`
 - Windows: `Toast-App-win.exe`
@@ -81,7 +81,7 @@ brew uninstall opspresso/tap/toast
 Toast App supports automatic updates. When a new version is released, the application will automatically display a notification and suggest an update.
 
 To update manually:
-1. Download the latest version from the [Releases page](https://github.com/opspresso/toast-dist/releases)
+1. Download the latest version from the [Releases page](https://github.com/opspresso/toast/releases)
 2. Uninstall the existing installation (optional)
 3. Install the new version
 
