@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="5; url=https://app.toast.sh">
+  <meta http-equiv="refresh" content="5; url=https://toast.sh">
   <title>Toast - Redirecting in a moment</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -209,7 +209,7 @@
 
     <div class="timer">Redirecting automatically in <span id="countdown">5</span> seconds</div>
 
-    <a href="https://app.toast.sh" class="btn pulse">Get Started Now <i class="fas fa-arrow-right"></i></a>
+    <a href="https://toast.sh" class="btn pulse">Get Started Now <i class="fas fa-arrow-right"></i></a>
 
     <div class="features">
       <div class="feature">
@@ -242,7 +242,7 @@
     const countdownTimer = setInterval(function() {
       if (timeLeft <= 0) {
         clearInterval(countdownTimer);
-        window.location.href = "https://app.toast.sh";
+        window.location.href = "https://toast.sh";
       } else {
         countdownElement.textContent = timeLeft;
       }
@@ -251,7 +251,7 @@
 
     // Auto redirect when page loads
     setTimeout(function() {
-      window.location.href = "https://app.toast.sh";
+      window.location.href = "https://toast.sh";
     }, 5000);
   </script>
 </body>

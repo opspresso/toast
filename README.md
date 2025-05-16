@@ -106,18 +106,18 @@ Solutions for common issues:
    - Ensure you are logged into your Toast Web account
    - Check your internet connection
 
-For more troubleshooting solutions, refer to the documentation included with the application or visit [app.toast.sh](https://app.toast.sh) for support.
+For more troubleshooting solutions, refer to the documentation included with the application or visit [toast.sh](https://toast.sh) for support.
 
 ## Toast Web Integration
 
-Toast App integrates with [Toast Web](https://app.toast.sh) for user authentication and subscription management:
+Toast App integrates with [Toast Web](https://toast.sh) for user authentication and subscription management:
 
 - User account creation and authentication
 - Subscription management for premium features
 - Secure access to paid features based on subscription status
 - Seamless login experience via system browser
 
-Users can create an account and manage their subscription at [https://app.toast.sh](https://app.toast.sh).
+Users can create an account and manage their subscription at [https://toast.sh](https://toast.sh).
 
 ## System Requirements
 
@@ -132,4 +132,4 @@ MIT License - See the [LICENSE](LICENSE) file for details.
 
 ## Contact and Support
 
-- [Official Website](https://app.toast.sh/)
+- [Official Website](https://toast.sh/)
