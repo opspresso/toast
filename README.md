@@ -1,7 +1,7 @@
 # Toast
 
 <p align="center">
-  <img src="images/logo512.png" alt="Toast App Logo" width="128" height="128">
+  <img src="images/logo192.png" alt="Toast App Logo" width="128" height="128">
 </p>
 
 <p align="center">
