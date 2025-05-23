@@ -15,7 +15,7 @@ Toast is the official distribution repository for Toast App. This repository is 
 Toast App is a productivity tool that allows users to define custom shortcuts and actions. When triggered with a global hotkey, Toast displays a popup with user-defined buttons. Each button can be assigned a specific action or command to execute.
 
 <p align="center">
-  <img src="https://toast.sh/images/toast-screenshot-light.png" alt="Toast App Screenshot" width="600">
+  <img src="https://toast.sh/images/screenshot-light.png" alt="Toast App Screenshot" width="600">
 </p>
 
 ## Download
