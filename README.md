@@ -1,7 +1,9 @@
 # Toast
 
 <p align="center">
-  <img src="https://toastapp.io/logo192.png" alt="Toast App Logo" width="192" height="192">
+  <a href="https://toastapp.io">
+    <img src="https://toastapp.io/logo192.png" alt="Toast App Logo" width="192" height="192">
+  </a>
 </p>
 
 <p align="center">
