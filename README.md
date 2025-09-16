@@ -36,13 +36,13 @@ Download the latest version from the [Releases page](https://github.com/opspress
 macOS users can install via Homebrew:
 
 ```bash
-brew install opspresso/tap/toast
+brew install --cask opspresso/tap/toast
 ```
 
 To uninstall:
 
 ```bash
-brew uninstall opspresso/tap/toast
+brew uninstall --cask opspresso/tap/toast
 ```
 
 ## Key Features
