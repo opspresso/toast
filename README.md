@@ -1,8 +1,8 @@
 # Toast
 
 <p align="center">
-  <a href="https://toastapp.io">
-    <img src="https://toastapp.io/logo192.png" alt="Toast App Logo" width="192" height="192">
+  <a href="https://app.toast.sh">
+    <img src="https://app.toast.sh/logo192.png" alt="Toast App Logo" width="192" height="192">
   </a>
 </p>
 
@@ -17,7 +17,7 @@ Toast is the official distribution repository for Toast App. This repository is 
 Toast App is a productivity tool that allows users to define custom shortcuts and actions. When triggered with a global hotkey, Toast displays a popup with user-defined buttons. Each button can be assigned a specific action or command to execute.
 
 <p align="center">
-  <img src="https://toastapp.io/images/screenshot-light.png" alt="Toast App Screenshot" width="600">
+  <img src="https://app.toast.sh/images/screenshot-light.png" alt="Toast App Screenshot" width="600">
 </p>
 
 ## Download
@@ -108,18 +108,18 @@ Solutions for common issues:
    - Ensure you are logged into your Toast Web account
    - Check your internet connection
 
-For more troubleshooting solutions, refer to the documentation included with the application or visit [toastapp.io](https://toastapp.io) for support.
+For more troubleshooting solutions, refer to the documentation included with the application or visit [app.toast.sh](https://app.toast.sh) for support.
 
 ## Toast Web Integration
 
-Toast App integrates with [Toast Web](https://toastapp.io) for user authentication and subscription management:
+Toast App integrates with [Toast Web](https://app.toast.sh) for user authentication and subscription management:
 
 - User account creation and authentication
 - Subscription management for premium features
 - Secure access to paid features based on subscription status
 - Seamless login experience via system browser
 
-Users can create an account and manage their subscription at [toastapp.io](https://toastapp.io).
+Users can create an account and manage their subscription at [app.toast.sh](https://app.toast.sh).
 
 ## System Requirements
 
@@ -134,4 +134,4 @@ MIT License - See the [LICENSE](LICENSE) file for details.
 
 ## Contact and Support
 
-- [Official Website](https://toastapp.io/)
+- [Official Website](https://app.toast.sh/)
