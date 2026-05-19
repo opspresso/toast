@@ -20,6 +20,14 @@ Toast App is a productivity tool that allows users to define custom shortcuts an
   <img src="https://app.toast.sh/images/screenshot-light.png" alt="Toast App Screenshot" width="600">
 </p>
 
+## Repositories
+
+The Toast project is split across the following repositories:
+
+- [opspresso/toast](https://github.com/opspresso/toast) — Distribution and main repository (public, this repo)
+- [opspresso/toast-app](https://github.com/opspresso/toast-app) — Toast App source (public)
+- `opspresso/toast-web` — Toast Web source (private)
+
 ## Download
 
 You can download the latest Toast App through the following methods:
@@ -28,8 +36,9 @@ You can download the latest Toast App through the following methods:
 
 Download the latest version from the [Releases page](https://github.com/opspresso/toast/releases):
 
-- macOS: `Toast-App-mac.dmg`
-- Windows: `Toast-App-win.exe`
+- macOS (Apple Silicon): `Toast-<version>-arm64.dmg`
+- Windows (installer): `Toast-Setup-<version>.exe`
+- Windows (portable): `Toast-<version>.exe`
 
 ### Homebrew (macOS)
 
@@ -123,7 +132,7 @@ Users can create an account and manage their subscription at [app.toast.sh](http
 
 ## System Requirements
 
-- **macOS**: 10.13 (High Sierra) or later
+- **macOS**: Apple Silicon (arm64) — macOS 11 (Big Sur) or later
 - **Windows**: Windows 10 or later
 - **Storage**: Minimum 100MB
 - **Memory**: Minimum 2GB RAM
