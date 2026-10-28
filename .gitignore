@@ -38,3 +38,7 @@ next-env.d.ts
 .env*.local
 
 **/.claude/settings.local.json
+
+# prompt files
+*.prompt.md
+*.prompt*.md
